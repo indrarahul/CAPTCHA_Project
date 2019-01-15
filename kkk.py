@@ -58,10 +58,8 @@ class tkwindow:
 			soup = BeautifulSoup(html, 'html.parser')
 			idddd = soup.find(id="ctl00_SPWebPartManager1_g_aa197fec_b38c_41a8_b14e_a11722636b37_ctl00_lblCaptcha")
 			os.system('mv ' + dire + "/" + a[i+j] + " " + dire + "_new/" + str(UniqNum) + "_" + a[i+j].split('.')[0] + '_' + idddd.text.replace(' ','-') + "_" + b[j] + "." +a[i+j].split('.')[-1])
-			try:
-				os.system('mv ' + 'CAPTCHA/' + a[i+j].split('.')[0] + '.png' + " " + "CAPTCHA_new/" + str(UniqNum) + "_" + a[i+j].split('.')[0] + '_' + idddd.text.replace(' ','-') + "_" + b[j] + ".png")
-			except:
-				os.system('mv ' + 'CAPTCHA/' + a[i+j].split('.')[0] + '.aspx' + " " + "CAPTCHA_new/" + str(UniqNum) + "_" + a[i+j].split('.')[0] + '_' + idddd.text.replace(' ','-') + "_" + b[j] + ".aspx")
+			os.system('mv ' + 'CAPTCHA/' + a[i+j].split('.')[0] + '.png' + " " + "CAPTCHA_new/" + str(UniqNum) + "_" + a[i+j].split('.')[0] + '_' + idddd.text.replace(' ','-') + "_" + b[j] + ".png")
+			os.system('mv ' + 'CAPTCHA/' + a[i+j].split('.')[0] + '.aspx' + " " + "CAPTCHA_new/" + str(UniqNum) + "_" + a[i+j].split('.')[0] + '_' + idddd.text.replace(' ','-') + "_" + b[j] + ".aspx")
 	
 		self.nextbb() 
 		self.root.mainloop()
